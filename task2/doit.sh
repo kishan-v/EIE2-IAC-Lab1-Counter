@@ -2,7 +2,7 @@
 
 # Can run this using source ./doit.sh
 
-# Kishan: each time Vbuddy connected to WSL2 you must passthrough USB devices to WSL using usbip command on Windows. Then may need to run sudo chmod -R 777 /dev/ttyUSB0
+# Kishan: each time Vbuddy connected to WSL2 you must passthrough USB devices to WSL using 'usbipd wsl list' / 'usbpid wsl attach--busid'  command on Windows. Then may need to run sudo chmod -R 777 /dev/ttyUSB0
 
 # cleanup
 rm -rf ob_dir

@@ -1,4 +1,4 @@
-module counter #(
+module counter_challenge #(
     parameter WIDTH = 8
 )(
     // interface signals
