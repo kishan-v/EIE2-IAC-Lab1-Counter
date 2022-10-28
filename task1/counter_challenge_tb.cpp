@@ -53,7 +53,7 @@ int main(int argc, char **argv, char **env)
             top->eval();
         }
 
-        top->rst = (i < 2); // New in challenge: removed reset condition
+        top->rst = (i < 2) | (i == 20);
         top->en = (i > 4);
         if (Verilated::gotFinish())
             exit(0);
