@@ -1,4 +1,4 @@
-#include "Vcounter.h"
+#include "Vcounter_challenge.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 #include "vbuddy.cpp"
@@ -10,7 +10,7 @@ int main(int argc, char **argv, char **env)
 
     Verilated::commandArgs(argc, argv);
     // init top verilog instance
-    Vcounter *top = new Vcounter;
+    Vcounter_challenge *top = new Vcounter_challenge;
     // init trace dump
     Verilated::traceEverOn(true);
     VerilatedVcdC *tfp = new VerilatedVcdC;
@@ -25,7 +25,7 @@ int main(int argc, char **argv, char **env)
     // initialize simulation inputs
     top->clk = 1;
     top->rst = 1;
-    top->en = 0;
+    top->en = 1;
 
     // run simulation for many clock cycles
     for (i = 0; i < 1000; i++)
