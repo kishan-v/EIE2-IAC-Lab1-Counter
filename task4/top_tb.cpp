@@ -27,6 +27,8 @@ int main(int argc, char **argv, char **env)
     top->rst = 1;
     top->en = 1;
 
+    vbdSetMode(0);
+
     // run simulation for many clock cycles
     for (i = 0; i < 1000; i++)
     {
@@ -50,7 +52,7 @@ int main(int argc, char **argv, char **env)
 
         // ---- End of Vbuddy output section
         top->rst = (i < 2) | (i == 15);
-        // top->en = vbdFlag();
+        top->en = vbdFlag();
         if (Verilated::gotFinish())
             exit(0);
     }
